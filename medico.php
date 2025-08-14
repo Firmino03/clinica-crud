@@ -1,4 +1,5 @@
 <?php
+require 'verifica_login.php';
 require 'db.php';
 
 if (isset($_POST['add'])) {
@@ -70,6 +71,7 @@ $medicos = $pdo->query("SELECT * FROM medico ORDER BY id DESC")->fetchAll(PDO::F
     <a href="index.php">Início</a> |
     <a href="paciente.php">Gerenciar Pacientes</a> |
     <a href="consulta.php">Gerenciar Consultas</a>
+    <p><a href="logout.php">Sair</a></p>
 </p>
 </body>
 </html>
