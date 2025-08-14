@@ -1,4 +1,5 @@
 <?php
+require 'verifica_login.php';
 require 'db.php';
 
 if (isset($_POST['add'])) {
@@ -119,6 +120,7 @@ $consultas = $pdo->query("
     <a href="index.php">Início</a> |
     <a href="medico.php">Gerenciar Médicos</a> |
     <a href="paciente.php">Gerenciar Pacientes</a>
+    <p><a href="logout.php">Sair</a></p>
 </p>
 </body>
 </html>

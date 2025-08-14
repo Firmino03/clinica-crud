@@ -1,4 +1,5 @@
 <?php
+require 'verifica_login.php';
 require 'db.php';
 
 if (isset($_POST['add'])) {
@@ -68,10 +69,12 @@ $pacientes = $pdo->query("SELECT * FROM paciente")->fetchAll(PDO::FETCH_ASSOC);
 </tr>
 <?php endforeach; ?>
 </table>
+
 <p>
     <a href="index.php">Início</a> |
     <a href="medico.php">Gerenciar Médicos</a> |
-    <a href="consulta.php">Gerenciar Consultas</a>
+    <a href="consulta.php">Gerenciar Consultas</a> |
+    <a href="logout.php">Sair</a>
 </p>
 </body>
 </html>
