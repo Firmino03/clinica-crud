@@ -2,7 +2,6 @@
 require 'db.php';
 
 if (isset($_POST['add'])) {
-    // Apenas troca o T por espaço e adiciona segundos para compatibilidade total
     $dataHora = str_replace('T', ' ', $_POST['data_hora']) . ':00';
 
     $stmt = $pdo->prepare("INSERT INTO consulta (id_medico, id_paciente, data_hora, observacoes) VALUES (?, ?, ?, ?)");
